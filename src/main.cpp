@@ -11,11 +11,10 @@ cmake -DCMAKE_TOOLCHAIN_FILE=/opt/vcpkg/scripts/buildsystems/vcpkg.cmake -S ..
 
 #include <CurConverter.h>
 
-const std::string apiKey = "18e6992ef7-0d6392a6c6-t3286k";
+const std::string apiKey = "<api_key>";
 
 int main(int argc, char const *argv[])
 {
-    /* code */
     CurConverter c {apiKey};
     c.getRate("USD", "CZK");
     return 0;
