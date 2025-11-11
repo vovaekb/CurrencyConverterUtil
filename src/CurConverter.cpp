@@ -38,6 +38,13 @@ float CurConverter::getRate(std::string curFrom, std::string curTo)
     else
     {
         std::cout << "Request success\n";
+
+        auto resData = json::parse(res.text);
+
+        for (const auto& [key, value] : resData.items())
+        {
+            std::cout << "key: " << key << "\n";
+        }
     }
     std::cout << "res.status_code:" << res.status_code << "\n";
     
